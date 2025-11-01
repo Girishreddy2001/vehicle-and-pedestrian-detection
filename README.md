@@ -28,7 +28,7 @@ Frontend (Streamlit) → Backend API (FastAPI) → AI Service (YOLOv8)
 
 ```bash
 # Clone and start
-git clone https://github.com/YOUR_USERNAME/vehicle-and-pedestrian-detection.git
+git clone https://github.com/Girishreddy2001/vehicle-and-pedestrian-detection.git
 cd vehicle-and-pedestrian-detection
 docker-compose -f docker-compose-hub.yml up -d
 
@@ -39,7 +39,7 @@ docker-compose -f docker-compose-hub.yml up -d
 
 ```bash
 # Clone and build
-git clone https://github.com/YOUR_USERNAME/vehicle-and-pedestrian-detection.git
+git clone https://github.com/Girishreddy2001/vehicle-and-pedestrian-detection.git
 cd vehicle-and-pedestrian-detection
 docker-compose up -d --build
 
