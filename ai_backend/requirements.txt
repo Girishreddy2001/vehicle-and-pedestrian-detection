@@ -1,0 +1,49 @@
+# ===============================
+# Object Detection with YOLOv8
+# Backend: FastAPI
+# Frontend: Streamlit
+# CPU-only setup (no CUDA)
+# Python version: 3.10
+# ===============================
+
+# Core ML / AI ------------------------------------------------------
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
+
+ultralytics==8.2.64          # Stable YOLOv8 release
+numpy>=1.23.5
+opencv-python>=4.9.0
+pillow>=10.3.0
+matplotlib>=3.3
+scipy>=1.4.1
+PyYAML>=5.3.1
+requests>=2.32.2
+pandas>=1.1.4
+tqdm>=4.66.3
+seaborn>=0.11.0
+psutil
+thop>=0.1.1
+
+# Web Backend (API) ------------------------------------------------
+fastapi==0.115.0
+uvicorn==0.30.6
+python-multipart==0.0.20
+packaging
+setuptools>=70.0.0
+python-dotenv==1.0.0
+
+# Web Frontend (UI) ------------------------------------------------
+#streamlit==1.37.1
+
+# Optional utilities -----------------------------------------------
+gitpython>=3.1.30
+urllib3>=2.5.0 ; python_version > "3.8"
+
+# ===============================
+# Notes:
+# - Compatible with Python 3.10
+# - Runs on CPU (no CUDA needed)
+# - Works with FastAPI + Streamlit
+# - Stable YOLOv8 version (8.2.64)
+# ===============================

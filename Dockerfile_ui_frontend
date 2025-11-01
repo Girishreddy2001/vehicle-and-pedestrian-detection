@@ -1,0 +1,30 @@
+FROM python:3.10.19
+
+WORKDIR /app
+
+# System packages needed by Pillow and for building wheels
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       build-essential \
+       libjpeg-dev \
+       zlib1g-dev \
+       libfreetype6-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY ui_frontend/requirements.txt /app/requirements.txt
+
+RUN python -m pip install --upgrade pip \
+ && pip install --no-cache-dir -r /app/requirements.txt
+
+# Copy code and model
+COPY ui_frontend/ /app/ui_frontend/
+
+# Recommended Streamlit envs for container
+ENV STREAMLIT_SERVER_HEADLESS=true \
+    STREAMLIT_SERVER_ENABLECORS=false \
+    STREAMLIT_SERVER_PORT=8501 \
+    PYTHONUNBUFFERED=1
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "ui_frontend/streamlit_app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]

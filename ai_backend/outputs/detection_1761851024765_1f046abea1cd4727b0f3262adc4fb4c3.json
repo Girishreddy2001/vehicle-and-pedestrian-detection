@@ -1,0 +1,18 @@
+{
+  "request_filename": "FC_335.jpg",
+  "saved_image": "C:\\Users\\giris\\projects\\car_and_pedestrion_detection\\ai_backend\\outputs\\detection_1761851024765_1f046abea1cd4727b0f3262adc4fb4c3.jpg",
+  "detections": [
+    {
+      "label": "car",
+      "confidence": 0.8891366124153137,
+      "bbox": [
+        107.84324645996094,
+        96.89990997314453,
+        722.4284057617188,
+        513.8778076171875
+      ]
+    }
+  ],
+  "inference_time_s": 0.406970739364624,
+  "timestamp_ms": 1761851024765
+}

@@ -1,0 +1,27 @@
+FROM python:3.10.19
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY ui_backend/requirements.txt /app/requirements.txt
+
+RUN python -m pip install --upgrade pip \
+ && pip install --no-cache-dir -r /app/requirements.txt
+
+# Copy code and model
+COPY ui_backend/ /app/ui_backend/
+
+# Create temp directory
+RUN mkdir -p /app/temp
+
+EXPOSE 8500
+
+CMD ["uvicorn", "ui_backend.app:app", "--host", "0.0.0.0", "--port", "8500"]

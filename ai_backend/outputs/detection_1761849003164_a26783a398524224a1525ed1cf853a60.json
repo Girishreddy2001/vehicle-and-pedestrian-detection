@@ -1,0 +1,28 @@
+{
+  "request_filename": "FC_79.jpg",
+  "saved_image": "C:\\Users\\giris\\projects\\car_and_pedestrion_detection\\ai_backend\\outputs\\detection_1761849003164_a26783a398524224a1525ed1cf853a60.jpg",
+  "detections": [
+    {
+      "label": "car",
+      "confidence": 0.9142035841941833,
+      "bbox": [
+        0.3002850413322449,
+        262.4892883300781,
+        284.34039306640625,
+        545.0426635742188
+      ]
+    },
+    {
+      "label": "car",
+      "confidence": 0.5513790249824524,
+      "bbox": [
+        33.513023376464844,
+        229.0352020263672,
+        800.0,
+        833.5819091796875
+      ]
+    }
+  ],
+  "inference_time_s": 0.6525919437408447,
+  "timestamp_ms": 1761849003164
+}
